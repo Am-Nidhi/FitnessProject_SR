@@ -1,0 +1,31 @@
+﻿@model FitnessFinal.Models.Member
+
+@{
+    ViewData["Title"] = "User Dashboard";
+}
+
+<h2>Welcome @Model.Name to User Dashboard</h2>
+
+@*<button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Logout", "Members")'">Logout</button>*@
+<br />
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">My Details</h5>
+                <p class="card-text">View My Details</p>
+                <a asp-controller="UserDashboard" asp-action="Details" asp-route-id="@Model.UserId" class="btn btn-sm btn-info">Show</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Edit Details</h5>
+                <p class="card-text">Edit My Details</p>
+                <a asp-controller="UserDashboard" asp-action="Edit" asp-route-id="@Model.UserId" class="btn btn-sm btn-warning">Edit</a>
+            </div>
+        </div>
+    </div>
+</div>

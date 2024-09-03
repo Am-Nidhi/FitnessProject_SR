@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FitnessFinal.Models.Member>
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h1>Admin Dashboard</h1>
+@*<button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Logout", "Members")'">Logout</button>*@
+
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Members</h5>
+                <p class="card-text">Perform CRUD Operations</p>
+                <a asp-controller="Members" asp-action="Index" class="btn btn-sm btn-info btn-block">Members</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Membership Types</h5>
+                <p class="card-text">Perform CRUD Operations</p>
+                <a asp-controller="membershiptypes" asp-action="Index" class="btn btn-sm btn-info btn-block">Membership Types</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Enquiries</h5>
+                <p class="card-text">Perform CRUD Operations</p>
+                <a asp-controller="Enquiries" asp-action="Index" class="btn btn-sm btn-info btn-block">Enquiries</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Trainers</h5>
+                <p class="card-text">Perform CRUD Operations</p>
+                <a asp-controller="Trainers" asp-action="Index" class="btn btn-sm btn-info btn-block">Trainers</a>
+            </div>
+        </div>
+    </div>
+</div>
